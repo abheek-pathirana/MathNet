@@ -20,6 +20,7 @@ It is pretrained on carefully curated in-house datasets — including 6.3 millio
 - `Examples/` — inference demos
 - `README.md` — this file
 - `requirements.txt` - system requirements and library requirements to run the project
+- `Reccomendations for inference` - General reccomendations when inferencing MathNet
 
 ## Usage
 
