@@ -19,7 +19,7 @@ MathNet is a research-oriented project aimed at exploring the feasibility and de
 - The models are capable of 3 digit 2 number arithmetic to a certain extent.
 - models can answer certain word problems (ex. if a man has 2 cats and gets 3 more how much does he have?)
 
-## Repository Structure
+# Repository Structure
 
 - `src/` — source code for the models and pipeline
 - `mathnet/` — full deployable stack (ready to run)
@@ -62,7 +62,7 @@ Follow the on-screen prompts to enter math questions.
     •   Use "if x-5=7 what is x?" format when asking algebraic questions.
 	
  
- ## Future Work
+ # Future Work
 	•	Integrate a fallback general-purpose language model to handle non-math queries gracefully.
 	•	Expand pretraining datasets with diverse, real-world math problems to improve robustness.
 	•	Enhance gating network accuracy to reduce routing errors.
