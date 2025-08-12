@@ -1,6 +1,6 @@
 # MathNet
 
-MathNet is the smallest known tool-calling small language model system, featuring specialized models for algebraic reasoning (5.63M params), arithmetic computation (5.27M params), and a gating network (3.32M params) totaling under 14 million parameters. MathNet also include a RLHF data collection modules.
+MathNet is the smallest known tool-calling small language model system, featuring specialized models for algebraic reasoning (5.63M params), arithmetic computation (5.27M params), and a gating network (3.32M params) totaling under 14 million parameters. MathNet also include a RLHF data collection module.
 
 It is pretrained on carefully curated in-house datasets — including 6.3 million tokens each for algebraic and arithmetic tasks (100% synthetic), plus 12 million tokens for the gating model — derived from synthetic task-oriented data to ensure strong math reasoning performance. Additionally, it benefits from an 8 million token general pretraining phase on handpicked Project Gutenberg texts to build foundational language understanding. The RLFH data collection module promts the user to rate the response given by the model and the users ratings will be logged and could be potentially used for further devolopment of this project through RLHF.
 
