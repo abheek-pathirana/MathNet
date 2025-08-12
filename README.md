@@ -10,6 +10,8 @@ It is pretrained on carefully curated in-house datasets — including 6.3 millio
 - Modular design with task-specialist models and dynamic routing via gating network.
 - Efficient, lightweight, and suitable for resource-constrained environments.
 - Includes tool-calling mechanism for precise arithmetic evaluations.
+- The models are capable of 3 digit 2 number arithmetic to a certain extent.
+- models can answer certain word problems (ex. if a man has 2 cats and gets 3 more how much does he have?)
 
 ## Repository Structure
 
@@ -50,5 +52,6 @@ Follow the on-screen prompts to enter math questions.
 	•	Since it wasnt trained on a wide dataset nor does it have a high parameter count expect it to be unusable in any area it wasnt trained in.
 	•	Give it very simple prompts and stick to the format avalable in the datasets(you can find them at "MathNet/src"
 	•	Stick to the max token lenght and try to keep the input less than 30 tokens.
+    •   Use "if x-5=7 what is x?" format when asking algebraic questions.
 	
 
