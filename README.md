@@ -30,9 +30,14 @@ MathNet is a research-oriented project aimed at exploring the feasibility and de
 
 ## Usage
 
-Clone the repository and run:
-
+run:
 ```bash
+git clone https://github.com/abheek-pathirana/MathNet.git #cloning this repo
+
+conda activate {your environment name} 
+
+pip install -r requirements.txt 
+
 cd MathNet
 cd mathnet
 python run.py                #make sure you run this after activating your environment with the libraries in the requirements file.```
