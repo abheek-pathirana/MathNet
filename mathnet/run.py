@@ -11,6 +11,8 @@ import ast
 import operator
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel, GPT2ForSequenceClassification
+import json
+from datetime import datetime
 
 # Generation parameters
 GEN_TEMPERATURE = 0.7   # creativity/randomness
@@ -198,6 +200,20 @@ def full_pipeline(text):
         output_text = generate_text(arith_model, arith_tokenizer, wrapped_text)
     return output_text
 
+FEEDBACK_FILE = "feedback.jsonl"
+
+def save_feedback(prompt, response, feedback):
+    data = {
+        "timestamp": datetime.utcnow().isoformat(),
+        "prompt": prompt,
+        "response": response,
+        "feedback": feedback  # "good" or "bad"
+    }
+    with open(FEEDBACK_FILE, "a", encoding="utf-8") as f:
+        f.write(json.dumps(data) + "\n")
+
+
+
 if __name__ == "__main__":
     while True:
 
@@ -222,3 +238,12 @@ if __name__ == "__main__":
         print(" ")
      
         print(f" {extract_and_eval(output)}\n")
+
+        feedback = input("Was this response good or bad? enter either (g/b) or press enter to skip: ").strip().lower()
+        if feedback in ["g", "good"]:
+            save_feedback(inp, output, "good")
+        elif feedback in ["b", "bad"]:
+            save_feedback(inp, output, "bad")
+        else:
+            print("Feedback skipped.")
+
