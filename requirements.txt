@@ -1,5 +1,4 @@
 torch > 2.6.0
 transformers > 4.49.0
-numpy
 tokenizers>=0.13.0
 tqdm
