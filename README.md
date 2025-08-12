@@ -1,8 +1,8 @@
 # MathNet
 
-MathNet is the smallest known tool-calling small language model system, featuring specialized models for algebraic reasoning (5.63M params), arithmetic computation (5.27M params), and a gating network (3.32M params) totaling under 14 million parameters.
+MathNet is the smallest known tool-calling small language model system, featuring specialized models for algebraic reasoning (5.63M params), arithmetic computation (5.27M params), and a gating network (3.32M params) totaling under 14 million parameters. MathNet also include a RLHF data collection modules.
 
-It is pretrained on carefully curated in-house datasets — including 6.3 million tokens each for algebraic and arithmetic tasks (100% synthetic), plus 12 million tokens for the gating model — derived from synthetic task-oriented data to ensure strong math reasoning performance. Additionally, it benefits from an 8 million token general pretraining phase on handpicked Project Gutenberg texts to build foundational language understanding.
+It is pretrained on carefully curated in-house datasets — including 6.3 million tokens each for algebraic and arithmetic tasks (100% synthetic), plus 12 million tokens for the gating model — derived from synthetic task-oriented data to ensure strong math reasoning performance. Additionally, it benefits from an 8 million token general pretraining phase on handpicked Project Gutenberg texts to build foundational language understanding. The RLFH data collection module promts the user to rate the response given by the model and the users ratings will be logged and could be potentially used for further devolopment of this project through RLHF.
 
 
 ## Disclaimer and Purpose
@@ -18,12 +18,13 @@ MathNet is a research-oriented project aimed at exploring the feasibility and de
 - Includes tool-calling mechanism for precise arithmetic evaluations.
 - The models are capable of 3 digit 2 number arithmetic to a certain extent.
 - models can answer certain word problems (ex. if a man has 2 cats and gets 3 more how much does he have?)
+- Will build up a dataset suitable for RLHF with every rating given by the user towards MathNet.
 
 # Repository Structure
 
 - `src/` — source code for the models and pipeline
 - `mathnet/` — full deployable stack (ready to run)
-- `Examples/` — inference demos
+- `Examples/` — inference demos (highly reccomended to view them)
 - `README.md` — this file
 - `requirements.txt` - system requirements and library requirements to run the project
 - `Reccomendations for inference` - General reccomendations when inferencing MathNet
@@ -59,18 +60,21 @@ Follow the on-screen prompts to enter math questions.
 	•	Incorporate a fallback or “normal” language model to gracefully handle non-math inputs.
 	•	Consider increasing sequence length if experimenting with larger or more complex datasets.
 	•	Regularly update and test gating network to minimize misrouting between experts.
+    •	Use the RLHF dataset made in MathNet after repeated use for fine tuning.
 
 # Recommendations (for general use)
 	•	Since it wasnt trained on a wide dataset nor does it have a high parameter count expect it to be unusable in any area it wasnt trained in.
 	•	Give it very simple prompts and stick to the format avalable in the datasets(you can find them at "MathNet/src"
 	•	Stick to the max token lenght and try to keep the input less than 30 tokens.
     •   Use "if x-5=7 what is x?" format when asking algebraic questions.
+	•   Give MathNet the rating when it asks for it. (will be helpful if you were to finetune it later)
 	
  
  # Future Work
 	•	Integrate a fallback general-purpose language model to handle non-math queries gracefully.
 	•	Expand pretraining datasets with diverse, real-world math problems to improve robustness.
 	•	Enhance gating network accuracy to reduce routing errors.
+ 	•   Fine tune the model using RLHF. (already in the process of collecting data)
 	•	Increase model capabilities to handle more complex algebraic expressions and multi-step reasoning.
 	•	Optimize inference speed for deployment on resource-constrained devices.
 
