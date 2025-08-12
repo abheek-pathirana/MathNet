@@ -32,21 +32,21 @@ python run.py                #make sure you run this after activating your envir
 
 Follow the on-screen prompts to enter math questions.
 
-Limitations
+# Limitations
 	•	Currently supports mostly grade 2-level algebra and basic arithmetic.
 	•	Limited handling of complex algebraic expressions (e.g., symbolic variable manipulations like 2a + 1a).
 	•	May misclassify or reject non-math or ambiguous queries.
 	•	Dataset is synthetic and does not cover all real-world math problem varieties.
 	•	Does not yet include fallback language model for general conversation.
 
-Recommendations (if planning to further develop)
+# Recomendations (if planning to further develop)
 	•	Use clear, math-focused input queries for best results.
 	•	Extend pretraining datasets to include more diverse algebraic problems for improved coverage.
 	•	Incorporate a fallback or “normal” language model to gracefully handle non-math inputs.
 	•	Consider increasing sequence length if experimenting with larger or more complex datasets.
 	•	Regularly update and test gating network to minimize misrouting between experts.
 
-Recommendations (for general use)
+# Recommendations (for general use)
 	•	Since it wasnt trained on a wide dataset nor does it have a high parameter count expect it to be unusable in any area it wasnt trained in.
 	•	Give it very simple prompts and stick to the format avalable in the datasets(you can find them at "MathNet/src"
 	•	Stick to the max token lenght and try to keep the input less than 30 tokens.
