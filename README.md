@@ -27,7 +27,7 @@ Clone the repository and run:
 cd MathNet
 cd mathnet
 python run.py                #make sure you run this after activating your environment with the libraries in the requirements file.
-```bash
+bash
 
 
 Follow the on-screen prompts to enter math questions.
