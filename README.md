@@ -61,4 +61,11 @@ Follow the on-screen prompts to enter math questions.
 	•	Stick to the max token lenght and try to keep the input less than 30 tokens.
     •   Use "if x-5=7 what is x?" format when asking algebraic questions.
 	
+ 
+ ## Future Work
+	•	Integrate a fallback general-purpose language model to handle non-math queries gracefully.
+	•	Expand pretraining datasets with diverse, real-world math problems to improve robustness.
+	•	Enhance gating network accuracy to reduce routing errors.
+	•	Increase model capabilities to handle more complex algebraic expressions and multi-step reasoning.
+	•	Optimize inference speed for deployment on resource-constrained devices.
 
