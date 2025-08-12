@@ -1,1 +1,31 @@
+# reccomendations for inference
 
+
+Use a machine with a decent gpu for best performance
+stick to this simple format for algebraic tasks
+                    "if x-{whole number}={another whole number} what is x?"
+
+# examples for algebraic format
+
+{ if 4+x=13 whats x?,
+if 14+x=18,
+if x/9=10 whats x?,
+if x-12=12 whats x?,
+if 20*x=160 whats x?,
+if 6+x=12 whats x?,
+if x-16=15 whats x?,
+}
+
+# examples for Arithmetic format
+
+{ 4 times 2,
+  10 divided by 3,
+  what is 51+45?,
+  what is 6 divided by 2?
+  what is 6/5?
+  5+1
+  30-15,
+  28*5,
+  5 plus 40,
+  80 minus 20,
+}
