@@ -4,6 +4,12 @@ MathNet is the smallest known tool-calling small language model system, featurin
 
 It is pretrained on carefully curated in-house datasets — including 6.3 million tokens each for algebraic and arithmetic tasks (100% synthetic), plus 12 million tokens for the gating model — derived from synthetic task-oriented data to ensure strong math reasoning performance. Additionally, it benefits from an 8 million token general pretraining phase on handpicked Project Gutenberg texts to build foundational language understanding.
 
+
+## Disclaimer and Purpose
+
+MathNet is a research-oriented project aimed at exploring the feasibility and design of highly specialized, lightweight tool-calling small language models for mathematical reasoning. While it demonstrates promising capabilities in basic algebra and arithmetic tasks within a constrained domain, it is not intended for production use or critical applications at this stage. Users should be aware that its training data is synthetic and limited in scope, and the system may not generalize well beyond its designed tasks. This work serves as a foundation for further academic inquiry and development in efficient, modular AI architectures that blend symbolic reasoning with neural computation.
+
+
 ## Features
 
 - Hybrid micro-LLM architecture combining symbolic reasoning and exact computation.
