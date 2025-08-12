@@ -81,7 +81,7 @@ print("started progress in 2/7/2025 and completed in 15/7/2025.")
 print(" ")
 print("A property of abheekpathirana.")
 print(" ")
-print("More info at - https://github.com/abheek-pathirana/M3-Trained-Micro-GPT")
+print("More info at - https://github.com/abheek-pathirana/MathNet/tree/main")
 print(" ")
 print(f" MathNet is set to {DEVICE} on your device.\n")
 
