@@ -208,6 +208,7 @@ if __name__ == "__main__":
         
         if inp.lower() == "exit":
             print("Goodbye 👋")
+            break
         
         if not re.search(r"[0-9+\-*/=^()]", inp):
             print("Sorry Iam only able to reply to basic math related queries.")
