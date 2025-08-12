@@ -14,9 +14,10 @@ It is pretrained on carefully curated in-house datasets — including 6.3 millio
 ## Repository Structure
 
 - `src/` — source code for the models and pipeline
-- `pre_training/` — datasets and scripts for task-oriented pretraining
-- `Examples/` — inference demos and usage examples
+- `mathnet/` — full deployable stack (ready to run)
+- `Examples/` — inference demos
 - `README.md` — this file
+- `requirements.txt` - system requirements and library requirements to run the project
 
 ## Usage
 
@@ -26,8 +27,8 @@ Clone the repository and run:
 cd MathNet
 cd mathnet
 python run.py                #make sure you run this after activating your environment with the libraries in the requirements file.
+   bash```
 
-'''bash
 
 Follow the on-screen prompts to enter math questions.
 
