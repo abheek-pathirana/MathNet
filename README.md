@@ -71,10 +71,10 @@ Follow the on-screen prompts to enter math questions.
 
    ```bash
    
-    <start_prompt>if x-2=5 what is x?</end_prompt># When max_length is set high (e.g., 64), the model may keep generating past the answer:
-	
-    <start_answer><math_call_start>5+2</math_call_end></start_answer># ...followed by unintended extra tokens (hallucinations) as it tries to "fill" the length.
-   '''
+    <start_prompt>if x-19=7 #this which you can observe in the above image is the result of hallucinations in the model, the cause for this is the fact that the model is set to genarate 64 tokens but when the answer of the model is less than 64 tokens it still has no option but to continue genarating until it reaches 64 tokens and this leads to hallucinations.
+
+   ```
+   
 
 
 
