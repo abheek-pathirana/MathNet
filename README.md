@@ -22,7 +22,7 @@ MathNet is a research-oriented project aimed at exploring the feasibility and de
 
 # Repository Structure
 
-- `src/` — source code for the models and pipeline
+- `src/` — source code for the models, pipeline and benchmarking
 - `mathnet/` — full deployable stack (ready to run)
 - `Examples/` — inference demos (highly reccomended to view them)
 - `README.md` — this file
