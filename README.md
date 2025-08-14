@@ -67,6 +67,9 @@ Follow the on-screen prompts to enter math questions.
    the same example running on the terminal:
    <img width="682" height="483" alt="Screenshot 2025-08-14 at 11 47 47" src="https://github.com/user-attachments/assets/837b2283-575b-47df-97d8-63c0f6ad24ef" />
 
+   note: the "<start_prompt>if x-19=7 whats" which you can see right after MathNet gives its expression with "<start_prompt>if x-2=5 what is ?<end_prompt>
+<start_answer>"<math_call_start>5+2<math_call_end›"<end_answer>" is the model hallucinating on itself because currently it is set to genarate 64 tokens but when the answer is less than 64 tokens it still attempts to fill up the missing tokens and this leads to hallucinations in the model.
+
 
 
 
