@@ -54,6 +54,22 @@ Follow the on-screen prompts to enter math questions.
 	•	Dataset is synthetic and does not cover all real-world math problem varieties.
 	•	Does not yet include fallback language model for general conversation.
 
+
+
+
+# Methology 
+   <img width="1184" height="506" alt="Screenshot 2025-08-14 at 12 14 34" src="https://github.com/user-attachments/assets/0bdcc7ed-aebb-4988-88a2-51461b7a6d43" />
+
+
+   with an example:
+   <img width="1225" height="439" alt="Screenshot 2025-08-14 at 12 05 14" src="https://github.com/user-attachments/assets/41740b51-c7ec-437b-a7e8-3ed99c94e8d9" />
+
+   the same example running on the terminal:
+   <img width="682" height="483" alt="Screenshot 2025-08-14 at 11 47 47" src="https://github.com/user-attachments/assets/837b2283-575b-47df-97d8-63c0f6ad24ef" />
+
+
+
+
 # Recomendations (if planning to further develop)
 	•	Use clear, math-focused input queries for best results.
 	•	Extend pretraining datasets to include more diverse algebraic problems for improved coverage.
