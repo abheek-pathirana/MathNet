@@ -57,8 +57,7 @@ Follow the on-screen prompts to enter math questions.
 # Benchmarks
 <img width="829" height="448" alt="bechmark_f" src="https://github.com/user-attachments/assets/f66c6492-bea6-43ad-8ca6-7774d6efed60" />
 
-note: the steady dip in the multiplication and division is dues to the fact that the model was never trained on "5x2" but instead trained on "5*2" but the dataset follows the "5x2" format and additionaly the model was neve trained on modarately complex word problems and was only trained on "if x-4=9 wjhat is x?" format questions, but the question set in the benchmarks followed a moderately complex very wide domain question.
-
+Note: Accuracy per operator on the 100k SimpleMath benchmark dataset. Multiplication (*) accuracy is lower due to mismatch with the x notation in the benchmark. Division (/) accuracy is low because the model was not trained on enough division problems. Word problems show poor accuracy due to complexity beyond the training data. The overall correct answers are 21,180 (~21%), indicating moderate generalization.
 <img width="682" height="483" alt="Screenshot 2025-08-14 at 12 51 04" src="https://github.com/user-attachments/assets/4196c4a7-4dd4-483e-ab10-8feece8036f3" />
 
 Considering the model size and it scoring 21.18% in the (SimpleMath dataset which was used as a bench mark by us) it can be said the model achieves moderate level of genaralization.
