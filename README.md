@@ -59,7 +59,8 @@ Follow the on-screen prompts to enter math questions.
 
 Note: Accuracy per operator on the 100k SimpleMath benchmark dataset. Multiplication (*) accuracy is lower due to mismatch with the x notation in the benchmark. Division (/) accuracy is low because the model was not trained on enough division problems. Word problems show poor accuracy due to complexity beyond the training data. The overall correct answers are 21,180 (~21%), indicating moderate generalization.
 
-<img width="758" height="530" alt="Screenshot 2025-08-14 at 12 50 16" src="https://github.com/user-attachments/assets/45ef0db7-89fa-4b15-b1fb-18b515f699e5" />
+<img width="758" height="530" alt="Screenshot 2025-08-14 at 19 08 15" src="https://github.com/user-attachments/assets/db1f0977-71a9-4c47-a7c9-1ca3db3dc539" />
+
 
 Considering the model size and it scoring 21.18% in the (SimpleMath dataset which was used as a bench mark by us) it can be said the model achieves moderate level of genaralization.
 
