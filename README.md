@@ -55,10 +55,13 @@ Follow the on-screen prompts to enter math questions.
 	•	Does not yet include fallback language model for general conversation.
 
 # Benchmarks
-<img width="829" height="448" alt="benchmarks" src="https://github.com/user-attachments/assets/f065cd20-0aff-4db7-beeb-0a0057120f84" />
+<img width="829" height="448" alt="bechmark_f" src="https://github.com/user-attachments/assets/f66c6492-bea6-43ad-8ca6-7774d6efed60" />
 
+note: the steady dip in the multiplication and division is dues to the fact that the model was never trained on "5x2" but instead trained on "5*2" but the dataset follows the "5x2" format and additionaly the model was neve trained on modarately complex word problems and was only trained on "if x-4=9 wjhat is x?" format questions, but the question set in the benchmarks followed a moderately complex very wide domain question.
 
+<img width="682" height="483" alt="Screenshot 2025-08-14 at 12 51 04" src="https://github.com/user-attachments/assets/4196c4a7-4dd4-483e-ab10-8feece8036f3" />
 
+Considering the model size and it scoring 21.18% in the (SimpleMath dataset which was used as a bench mark by us) it can be said the model achieves moderate level of genaralization.
 
 
 
