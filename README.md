@@ -54,6 +54,11 @@ Follow the on-screen prompts to enter math questions.
 	•	Dataset is synthetic and does not cover all real-world math problem varieties.
 	•	Does not yet include fallback language model for general conversation.
 
+# Benchmarks
+<img width="829" height="448" alt="benchmarks" src="https://github.com/user-attachments/assets/f065cd20-0aff-4db7-beeb-0a0057120f84" />
+
+
+
 
 
 
