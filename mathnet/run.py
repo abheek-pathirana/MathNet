@@ -15,9 +15,9 @@ import json
 from datetime import datetime
 
 # Generation parameters
-GEN_TEMPERATURE = 0.7   # creativity/randomness
-GEN_TOP_K = 50          # diversity limit by top-k
-GEN_TOP_P = 0.9         # diversity limit by nucleus sampling
+GEN_TEMPERATURE = 0.2   # creativity/randomness
+GEN_TOP_K = 30          # diversity limit by top-k
+GEN_TOP_P = 0.3        # diversity limit by nucleus sampling
 
 # Gating confidence threshold
 GATING_CONF_THRESHOLD = 0.5 # between 0 and 1
@@ -169,6 +169,8 @@ def classify_gating(text):
 
 def generate_text(model, tokenizer, text, max_length=64, temperature=GEN_TEMPERATURE, top_k=GEN_TOP_K, top_p=GEN_TOP_P):
     inputs = tokenizer(text, return_tensors="pt").to(DEVICE)
+    generated_text = ""  # Initialize to avoid UnboundLocalError
+
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
@@ -177,8 +179,17 @@ def generate_text(model, tokenizer, text, max_length=64, temperature=GEN_TEMPERA
             pad_token_id=tokenizer.eos_token_id,
             do_sample=False,
         )
-    generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+        if outputs is not None and len(outputs) > 0:
+            generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    # Stop generation at <end_answer> if it appears
+    end_tag = "<end_answer>"
+    if end_tag in generated_text:
+        generated_text = generated_text.split(end_tag)[0].strip()
+
     return generated_text
+
 
 
 
@@ -216,34 +227,49 @@ def save_feedback(prompt, response, feedback):
 
 if __name__ == "__main__":
     while True:
-
+        # Ask for main math question
         inp = input("Enter math question (or 'exit'): ").strip()
-        if not inp:  # If string is empty after stripping
+        
+        if not inp:
             print("Please enter a valid math question.")
             continue
-        
         if inp.lower() == "exit":
             print("Goodbye 👋")
             break
-        
         if not re.search(r"[0-9+\-*/=^()]", inp):
-            print("Sorry Iam only able to reply to basic math related queries.")
+            print("Sorry I am only able to reply to basic math related queries.")
             continue
-        
-            break
+
+        # Run the model
         output = full_pipeline(inp)
-        print("Final output from routed model:")
-        print(" ")
+        print("\nFinal output from routed model:\n")
         print(output)
-        print(" ")
-     
-        print(f" {extract_and_eval(output)}\n")
+        print(f"{extract_and_eval(output)}\n")
 
-        feedback = input("Was this response good or bad? enter either (g/b) or press enter to skip: ").strip().lower()
-        if feedback in ["g", "good"]:
-            save_feedback(inp, output, "good")
-        elif feedback in ["b", "bad"]:
-            save_feedback(inp, output, "bad")
-        else:
-            print("Feedback skipped.")
-
+        # Ask for feedback
+        while True:
+            feedback_input = input("Was this response good or bad? (g/b) or press Enter to skip: ").strip().lower()
+            
+            if feedback_input == "exit":
+                print("Goodbye 👋")
+                exit()  # exit program
+            elif feedback_input == "g":
+                save_feedback(inp, output, "good")
+                break
+            elif feedback_input == "b":
+                save_feedback(inp, output, "bad")
+                break
+            elif feedback_input == "":
+                print("Feedback skipped.")
+                break
+            else:
+                # Before sending input to model, validate it
+                if not re.search(r"[0-9+\-*/=^()]", feedback_input):
+                    print("Invalid math input. Skipping.")
+                    break  # skip invalid input
+                # If valid, treat as new question and run model
+                inp = feedback_input
+                output = full_pipeline(inp)
+                print("\nFinal output from routed model:\n")
+                print(output)
+                print(f"{extract_and_eval(output)}\n")
