@@ -44,7 +44,7 @@ config = GPT2Config(
     n_positions=256,     # context#64 for the arithmetic model
     n_ctx=256,           #64(if you are tuning this hyperparameter then make sure both this and "n_positions" have the same number) and make sure u edit the "chunk_size=256" to the same value as this.
     n_embd=96,          # Hidden size
-    n_layer=4,          # Layers (transformer blocks)37
+    n_layer=7,          # Layers (transformer blocks) #7 for algebraic and 4 for arithmetic (4 for algebraic would be fine but i trained it on 7)
     n_head=4,           # Attention heads
 )
 
