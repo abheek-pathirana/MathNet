@@ -75,19 +75,11 @@ Considering the model size and it scoring 21.18% in the (SimpleMath dataset whic
    <img width="1225" height="439" alt="Screenshot 2025-08-14 at 12 05 14" src="https://github.com/user-attachments/assets/41740b51-c7ec-437b-a7e8-3ed99c94e8d9" />
 
    the same example running on the terminal:
-   <img width="682" height="483" alt="Screenshot 2025-08-14 at 11 47 47" src="https://github.com/user-attachments/assets/837b2283-575b-47df-97d8-63c0f6ad24ef" />
+   <img width="682" height="483" alt="Screenshot 2025-08-14 at 23 04 06" src="https://github.com/user-attachments/assets/ed915e09-e838-4f8c-a849-b3b546683760" />
 
-   note: 
 
-   ```bash
+
    
-    <start_prompt>if x-19=7 #this which you can observe in the above image is the result of hallucinations in the model, the cause for this is the fact that the model is set to genarate 64 tokens but when the answer of the model is less than 64 tokens it still has no option but to continue genarating until it reaches 64 tokens and this leads to hallucinations.
-
-   ```
-   
-
-
-
 # Recomendations (if planning to further develop)
 	•	Use clear, math-focused input queries for best results.
 	•	Extend pretraining datasets to include more diverse algebraic problems for improved coverage.
