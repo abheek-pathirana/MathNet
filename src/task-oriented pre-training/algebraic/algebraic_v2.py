@@ -75,7 +75,7 @@ class TokenChunkDataset(Dataset):
 # === Load Data ===
 chunks = torch.load("chunked_data601_3(new).pt")
 dataset = TokenChunkDataset(chunks)
-loader = DataLoader(dataset, batch_size=32, shuffle=False)
+loader = DataLoader(dataset, batch_size=32, shuffle=False)# for curriculum learning since the dataset follows curriculum learning for the first 25% and then it the dataset is random
 
 # === Optimizer + Scheduler ===
 optimizer = AdamW(model.parameters(), lr=1e-4)
