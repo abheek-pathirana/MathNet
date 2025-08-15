@@ -75,6 +75,12 @@ MathNet
 distilgpt2
 
 
+distilgpt2 benchmarks on terminal
+
+<img width="682" height="483" alt="Screenshot 2025-08-15 at 07 55 40" src="https://github.com/user-attachments/assets/bcb1b241-29c6-4160-b612-5afde37c8b77" />
+
+
+
 
 # Methology 
    <img width="1184" height="506" alt="Screenshot 2025-08-14 at 12 14 34" src="https://github.com/user-attachments/assets/0bdcc7ed-aebb-4988-88a2-51461b7a6d43" />
