@@ -64,7 +64,7 @@ Note: Accuracy per operator on the 100k SimpleMath benchmark dataset. Multiplica
 
 MathNet benchmarks on terminal
 
-Considering the model size and it scoring 21.18% in the (SimpleMath dataset which was used as a bench mark by us) it can be said the model achieves moderate level of genaralization.
+Considering the model size and it scoring 21.18% in the (SimpleMath dataset which was used as a bench mark by us) it can be said the model achieves moderate level of generalisation.
 
 # Accuracy Compared with DistilGPT2
 
@@ -91,7 +91,7 @@ Furthermore, MathNet’s integrated tool-calling mechanism offloads complex arit
 
 
 
-Methology
+
 # Methology 
    <img width="1184" height="506" alt="Screenshot 2025-08-14 at 12 14 34" src="https://github.com/user-attachments/assets/0bdcc7ed-aebb-4988-88a2-51461b7a6d43" />
 
@@ -105,7 +105,7 @@ Methology
 
 
    
-# Recomendations (if planning to further develop)
+# Recommendations (if planning to further develop)
 	•	Use clear, math-focused input queries for best results.
 	•	Extend pretraining datasets to include more diverse algebraic problems for improved coverage.
 	•	Incorporate a fallback or “normal” language model to gracefully handle non-math inputs.
@@ -114,11 +114,11 @@ Methology
     •	Use the RLHF dataset made in MathNet after repeated use for fine tuning.
 
 # Recommendations (for general use)
-	•	Since it wasnt trained on a wide dataset nor does it have a high parameter count expect it to be unusable in any area it wasnt trained in.
+	•	Since it wasn't trained on a wide dataset nor does it have a high parameter count expect it to be unusable in any area it wasn't trained in.
 	•	Give it very simple prompts and stick to the format available in the datasets(you can find them at "MathNet/src"
 	•	Stick to the max token length and try to keep the input less than 30 tokens.
     •   Use "if x-5=7 what is x?" format when asking algebraic questions.
-	•   Give MathNet the rating when it asks for it. (will be helpful if you were to finetune it later)
+	•   Give MathNet the rating when it asks for it. (will be helpful if you were to fine tune it later)
 	
  
  # Future Work
