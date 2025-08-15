@@ -64,7 +64,7 @@ Note: Accuracy per operator on the 100k SimpleMath benchmark dataset. Multiplica
 
 MathNet benchmarks on terminal
 
-Considering the model size and it scoring 21.18% in the (SimpleMath dataset which was used as a bench mark by us) it can be said the model achieves moderate level of generalisation.
+Considering the model size and it scoring 21.18% in the (SimpleMath dataset by Procreations which was used as a bench mark by us) it can be said the model achieves moderate level of generalisation.
 
 ## Accuracy Compared with DistilGPT2
 
@@ -80,6 +80,8 @@ DistilGPT2
 <img width="682" height="483" alt="Screenshot 2025-08-15 at 07 55 40" src="https://github.com/user-attachments/assets/bcb1b241-29c6-4160-b612-5afde37c8b77" />
 
 DistilGPT2 benchmarks on terminal
+
+Note: You can find the link to the Simplemath dataset(used as a benchmark by us) in here "https://huggingface.co/datasets/ProCreations/SimpleMath"
 
 ## conclusion for the Benchmarks 
 
