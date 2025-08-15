@@ -83,7 +83,7 @@ DistilGPT2 benchmarks on terminal
 
 Note: You can find the link to the Simplemath dataset(used as a benchmark by us) in here "https://huggingface.co/datasets/ProCreations/SimpleMath"
 
-## conclusion for the Benchmarks 
+## Conclusion for the Benchmarks 
 
 Compared to DistilGPT2 model, MathNet delivers superior reasoning performance with a dramatically smaller parameter budget — 14.2M total parameters (combined algebraic, arithmetic, and gating modules) versus 82M in DistilGPT-2, representing an ~82.7% reduction in size. Despite this, MathNet achieves 20.3% higher accuracy on our domain-specific reasoning benchmarks, resulting in a parameter-to-accuracy ratio of ~1.49% per million parameters compared to DistilGPT-2’s 0.0107% per million parameters, So MathNet achieves ~139× more accuracy per parameter than DistilGPT-2 on this benchmark., indicating significantly higher efficiency per parameter.
 
