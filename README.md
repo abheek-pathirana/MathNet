@@ -1,21 +1,21 @@
 # MathNet
 
-MathNet is the smallest known tool-calling small language model system, featuring specialized models for algebraic reasoning (5.63M params), arithmetic reasoning (5.27M params), and a gating network (3.32M params) totaling under 14 million parameters. MathNet also include a RLHF data collection module.
+MathNet is the smallest known tool-calling small language model system, featuring specialised models for algebraic reasoning (5.63M params), arithmetic reasoning (5.27M params), and a gating network (3.32M params) totalling under 14 million parameters. MathNet also includes a RLHF data collection module.
 
-It is pretrained on carefully curated in-house datasets using curriculum learning for task-oriented pretraining — starting with simpler problems and gradually increasing complexity to maximize learning efficiency. This includes 6.3 million tokens each for algebraic and arithmetic tasks (100% synthetic), plus 12 million tokens for the gating model, all derived from synthetic task-oriented data to ensure strong math reasoning performance. Additionally, it benefits from an 8 million token general pretraining phase on handpicked Project Gutenberg texts to build foundational language understanding.
+It is pretrained on carefully curated in-house datasets using curriculum learning for task-oriented pretraining — starting with simpler problems and gradually increasing complexity to maximise learning efficiency. This includes 6.3 million tokens each for algebraic and arithmetic tasks (100% synthetic), plus 12 million tokens for the gating model, all derived from synthetic task-oriented data to ensure strong math reasoning performance. Additionally, it benefits from an 8 million token general pretraining phase on handpicked Project Gutenberg texts to build foundational language understanding.
 
 The RLHF-style data collection module prompts users to rate the model’s responses, with ratings logged for potential use in further fine-tuning through reinforcement learning from human feedback.
 
 ## Disclaimer and Purpose
 
-MathNet is a research-oriented project aimed at exploring the feasibility and design of highly specialized, lightweight tool-calling small language models for mathematical reasoning. While it demonstrates promising capabilities in basic algebra and arithmetic tasks within a constrained domain, it is not intended for production use or critical applications at this stage. Users should be aware that its training data is synthetic and limited in scope, and the system may not generalize well beyond its designed tasks. This work serves as a foundation for further academic inquiry and development in efficient, modular AI architectures that blend symbolic reasoning with neural computation.
+MathNet is a research-oriented project aimed at exploring the feasibility and design of highly specialised, lightweight tool-calling small language models for mathematical reasoning. While it demonstrates promising capabilities in basic algebra and arithmetic tasks within a constrained domain, it is not intended for production use or critical applications at this stage. Users should be aware that its training data is synthetic and limited in scope, and the system may not generalise well beyond its designed tasks. This work serves as a foundation for further academic inquiry and development in efficient, modular AI architectures that blend symbolic reasoning with neural computation.
 
 
 ## Features
 
 - Hybrid micro-LLM architecture combining symbolic reasoning and exact computation.
 - Modular design with task-specialist models and dynamic routing via gating network.
-- Efficient, lightweight, and suitable for resource-constrained environments.
+- Efficient, lightweight, and suitable for resource-constrained environments.mathnet
 - Includes tool-calling mechanism for precise arithmetic evaluations.
 - The models are capable of 3 digit 2 number arithmetic to a certain extent.
 - models can answer certain word problems (ex. if a man has 2 cats and gets 3 more how much does he have?)
@@ -25,10 +25,10 @@ MathNet is a research-oriented project aimed at exploring the feasibility and de
 
 - `src/` — source code for the models, pipeline and benchmarking
 - `mathnet/` — full deployable stack (ready to run)
-- `Examples/` — inference demos (highly reccomended to view them)
+- `Examples/` — inference demos (highly recommended to view them)
 - `README.md` — this file
 - `requirements.txt` - system requirements and library requirements to run the project
-- `Reccomendations for inference` - General reccomendations when inferencing MathNet
+- `Recommendations for inference` - General recommendations when inferencing MathNet
 
 ## Usage
 
@@ -83,15 +83,15 @@ DistilGPT2 benchmarks on terminal
 
 ## conclusion for the Benchmarks 
 
-Compared to DistilGPT models, MathNet delivers superior reasoning performance with a dramatically smaller parameter budget — 14.2M total parameters (combined algebraic, arithmetic, and gating modules) versus 82M in DistilGPT-2, representing an ~82.7% reduction in size. Despite this, MathNet achieves 20.3% higher accuracy on our domain-specific reasoning benchmarks, resulting in a parameter-to-accuracy ratio of ~1.49% per million parameters compared to DistilGPT-2’s 0.0107% per mission parameters, So MathNet achieves ~139× more accuracy per parameter than DistilGPT-2 on this benchmark., indicating significantly higher efficiency per parameter.
+Compared to DistilGPT models, MathNet delivers superior reasoning performance with a dramatically smaller parameter budget — 14.2M total parameters (combined algebraic, arithmetic, and gating modules) versus 82M in DistilGPT-2, representing an ~82.7% reduction in size. Despite this, MathNet achieves 20.3% higher accuracy on our domain-specific reasoning benchmarks, resulting in a parameter-to-accuracy ratio of ~1.49% per million parameters compared to DistilGPT-2’s 0.0107% per million parameters, So MathNet achieves ~139× more accuracy per parameter than DistilGPT-2 on this benchmark., indicating significantly higher efficiency per parameter.
 
-Whereas DistilGPT employs a single general-purpose transformer for all tasks, MathNet’s modular architecture — with specialized SLMs for algebra, arithmetic, and gating — allows for targeted pretraining, curriculum learning, and domain-optimized reasoning. This design yields higher accuracy in mathematical problem solving despite lower general language modeling capacity.
+Whereas DistilGPT employs a single general-purpose transformer for all tasks, MathNet’s modular architecture — with specialised SLMs for algebra, arithmetic, and gating — allows for targeted pretraining, curriculum learning, and domain-optimised reasoning. This design yields higher accuracy in mathematical problem solving despite lower general language modeling capacity.
 
 Furthermore, MathNet’s integrated tool-calling mechanism offloads complex arithmetic to an external calculator, reducing the computational burden and further improving response latency. These results demonstrate that with careful architectural design and task-specific training, small language models can not only rival but, in domain reasoning tasks, surpass much larger models, while offering substantial advantages in deployability, latency, and energy efficiency.
 
 
 
-
+Methology
 # Methology 
    <img width="1184" height="506" alt="Screenshot 2025-08-14 at 12 14 34" src="https://github.com/user-attachments/assets/0bdcc7ed-aebb-4988-88a2-51461b7a6d43" />
 
@@ -110,13 +110,13 @@ Furthermore, MathNet’s integrated tool-calling mechanism offloads complex arit
 	•	Extend pretraining datasets to include more diverse algebraic problems for improved coverage.
 	•	Incorporate a fallback or “normal” language model to gracefully handle non-math inputs.
 	•	Consider increasing sequence length if experimenting with larger or more complex datasets.
-	•	Regularly update and test gating network to minimize misrouting between experts.
+	•	Regularly update and test gating network to minimise misrouting between experts.
     •	Use the RLHF dataset made in MathNet after repeated use for fine tuning.
 
 # Recommendations (for general use)
 	•	Since it wasnt trained on a wide dataset nor does it have a high parameter count expect it to be unusable in any area it wasnt trained in.
-	•	Give it very simple prompts and stick to the format avalable in the datasets(you can find them at "MathNet/src"
-	•	Stick to the max token lenght and try to keep the input less than 30 tokens.
+	•	Give it very simple prompts and stick to the format available in the datasets(you can find them at "MathNet/src"
+	•	Stick to the max token length and try to keep the input less than 30 tokens.
     •   Use "if x-5=7 what is x?" format when asking algebraic questions.
 	•   Give MathNet the rating when it asks for it. (will be helpful if you were to finetune it later)
 	
@@ -127,5 +127,5 @@ Furthermore, MathNet’s integrated tool-calling mechanism offloads complex arit
 	•	Enhance gating network accuracy to reduce routing errors.
  	•   Fine tune the model using RLHF. (already in the process of collecting data)
 	•	Increase model capabilities to handle more complex algebraic expressions and multi-step reasoning.
-	•	Optimize inference speed for deployment on resource-constrained devices.
+	•	Optimise inference speed for deployment on resource-constrained devices.
 
