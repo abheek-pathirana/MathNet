@@ -91,6 +91,9 @@ Furthermore, MathNet’s integrated tool-calling mechanism offloads complex arit
 
 ## Runtime Efficiency and Parameter Utilisation
 
+<img width="500" height="324" alt="tokens_p:s" src="https://github.com/user-attachments/assets/1f9a8d36-df51-4c97-8a69-4ffdf7aed4ff" />
+
+
 MathNet not only has a drastically smaller total parameter count (<14.2M vs. 82M in DistilGPT-2) but also maintains exceptional runtime efficiency due to its modular design and tool-calling mechanism:
 	•	Active Parameters: At any given moment, less than 9 million parameters are active during inference.
 	•	Math Computation Load: Of these, only ~5.6 million parameters are ever used for performing actual arithmetic or algebraic reasoning.
