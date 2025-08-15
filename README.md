@@ -100,7 +100,7 @@ Furthermore, MathNet’s integrated tool-calling mechanism offloads complex arit
 MathNet not only has a drastically smaller total parameter count (<14.2M vs. 82M in DistilGPT-2) but also maintains exceptional runtime efficiency due to its modular design and tool-calling mechanism:
 	•	Active Parameters: At any given moment, less than 9 million parameters are active during inference.
 	•	Math Computation Load: Of these, only ~5.6 million parameters are ever used for performing actual arithmetic or algebraic reasoning.
-	•	Latency & Throughput: On terminal execution, MathNet achieves an average latency of 0.113 s per query and 346 tokens per second, compared to DistilGPT-2’s 1.23 s per query and 33 tokens per second, despite MathNet being orders of magnitude smaller it outperforms DistiltGPT-2 in virtually al mathematical tasks.
+	•	Latency & Throughput: On terminal execution, MathNet achieves an average latency of 0.113 s per query and 346 tokens per second, compared to DistilGPT-2’s 1.23 s per query and 33 tokens per second, despite MathNet being orders of magnitude smaller it outperforms DistiltGPT-2 in virtually all mathematical tasks.
 
 This demonstrates that MathNet’s design maximises efficiency: ~39% of parameters remain idle until needed, and the use of specialised small language models ensures minimal overhead while maintaining high reasoning performance.
 
