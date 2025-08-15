@@ -67,6 +67,8 @@ Considering the model size and it scoring 21.18% in the (SimpleMath dataset whic
 
 # Accuracy Compared with distilgpt2
 
+<img width="829" height="448" alt="acc1_d_m" src="https://github.com/user-attachments/assets/9a1cafa6-bb5d-4b14-b596-81657ade2545" />
+
 <img width="829" height="448" alt="bechmark_f" src="https://github.com/user-attachments/assets/7fb3b6c5-08b6-4fb1-a69f-9f8262f08b11" />
 MathNet
 <img width="832" height="448" alt="distilgpt2_ops" src="https://github.com/user-attachments/assets/5a443011-3a03-4a55-82a4-321a89fc6186" />
