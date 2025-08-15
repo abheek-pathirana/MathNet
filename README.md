@@ -83,7 +83,7 @@ DistilGPT2 benchmarks on terminal
 
 ## conclusion for the Benchmarks 
 
-Compared to DistilGPT models, MathNet delivers superior reasoning performance with a dramatically smaller parameter budget — 14.2M total parameters (combined algebraic, arithmetic, and gating modules) versus 82M in DistilGPT-2, representing an ~82.7% reduction in size. Despite this, MathNet achieves 20.3% higher accuracy on our domain-specific reasoning benchmarks, resulting in a parameter-to-accuracy ratio of ~1.49% per million parameters compared to DistilGPT-2’s 0.0107% per million parameters, So MathNet achieves ~139× more accuracy per parameter than DistilGPT-2 on this benchmark., indicating significantly higher efficiency per parameter.
+Compared to DistilGPT2 model, MathNet delivers superior reasoning performance with a dramatically smaller parameter budget — 14.2M total parameters (combined algebraic, arithmetic, and gating modules) versus 82M in DistilGPT-2, representing an ~82.7% reduction in size. Despite this, MathNet achieves 20.3% higher accuracy on our domain-specific reasoning benchmarks, resulting in a parameter-to-accuracy ratio of ~1.49% per million parameters compared to DistilGPT-2’s 0.0107% per million parameters, So MathNet achieves ~139× more accuracy per parameter than DistilGPT-2 on this benchmark., indicating significantly higher efficiency per parameter.
 
 Whereas DistilGPT employs a single general-purpose transformer for all tasks, MathNet’s modular architecture — with specialised SLMs for algebra, arithmetic, and gating — allows for targeted pretraining, curriculum learning, and domain-optimised reasoning. This design yields higher accuracy in mathematical problem solving despite lower general language modeling capacity.
 
