@@ -55,7 +55,7 @@ Follow the on-screen prompts to enter math questions.
 	•	Dataset is synthetic and does not cover all real-world math problem varieties.
 	•	Does not yet include fallback language model for general conversation.
 
-# Benchmarks
+# Evaluation & Benchmarks
 <img width="829" height="448" alt="bechmark_f" src="https://github.com/user-attachments/assets/f66c6492-bea6-43ad-8ca6-7774d6efed60" />
 
 Note: Accuracy per operator on the 100k SimpleMath benchmark dataset. Multiplication (*) accuracy is lower due to mismatch with the x notation in the benchmark. Division (/) accuracy is low because the model was not trained on enough division problems. Word problems show poor accuracy due to complexity beyond the training data. The overall correct answers are 21,180 (~21%), indicating moderate generalization.
@@ -65,6 +65,10 @@ Note: Accuracy per operator on the 100k SimpleMath benchmark dataset. Multiplica
 
 Considering the model size and it scoring 21.18% in the (SimpleMath dataset which was used as a bench mark by us) it can be said the model achieves moderate level of genaralization.
 
+Compared with distilgpt2
+
+<img width="829" height="448" alt="bechmark_f" src="https://github.com/user-attachments/assets/7fb3b6c5-08b6-4fb1-a69f-9f8262f08b11" />
+MathNet																													distilgpt2
 
 
 # Methology 
