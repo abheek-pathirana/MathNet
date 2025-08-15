@@ -62,22 +62,27 @@ Note: Accuracy per operator on the 100k SimpleMath benchmark dataset. Multiplica
 
 <img width="758" height="530" alt="Screenshot 2025-08-14 at 19 08 15" src="https://github.com/user-attachments/assets/db1f0977-71a9-4c47-a7c9-1ca3db3dc539" />
 
+MathNet benchmarks on terminal
 
 Considering the model size and it scoring 21.18% in the (SimpleMath dataset which was used as a bench mark by us) it can be said the model achieves moderate level of genaralization.
 
-# Accuracy Compared with distilgpt2
+# Accuracy Compared with DistilGPT2
 
 <img width="829" height="448" alt="acc1_d_m" src="https://github.com/user-attachments/assets/9a1cafa6-bb5d-4b14-b596-81657ade2545" />
 
 <img width="829" height="448" alt="bechmark_f" src="https://github.com/user-attachments/assets/7fb3b6c5-08b6-4fb1-a69f-9f8262f08b11" />
 MathNet
 <img width="832" height="448" alt="distilgpt2_ops" src="https://github.com/user-attachments/assets/5a443011-3a03-4a55-82a4-321a89fc6186" />
-distilgpt2
+DistilGPT2
 
-
-distilgpt2 benchmarks on terminal
 
 <img width="682" height="483" alt="Screenshot 2025-08-15 at 07 55 40" src="https://github.com/user-attachments/assets/bcb1b241-29c6-4160-b612-5afde37c8b77" />
+
+DistilGPT2 benchmarks on terminal
+
+## conclusion for the Benchmarks 
+
+Compared to DistilGPT models, MathNet delivers superior reasoning performance with a dramatically smaller parameter budget (<14M vs. 82M in DistilGPT-2) through a modular architecture of specialized SLMs for algebra, arithmetic, a gating network, and tool-calling. Whereas DistilGPTs employ a single general-purpose transformer for all tasks, MathNet’s division of labor enables targeted pretraining and curriculum learning within each domain, yielding higher accuracy in mathematical reasoning despite lower raw language modeling capacity. Its tool-calling mechanism further boosts efficiency by offloading complex arithmetic to an external calculator, reducing the computational burden on the model itself. This design demonstrates that carefully engineered small language models can rival—and in domain-specific reasoning, surpass—larger distilled models, while offering significant benefits in deployability, latency, and resource efficiency.
 
 
 
