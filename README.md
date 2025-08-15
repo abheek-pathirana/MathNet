@@ -6,7 +6,7 @@ It is pretrained on carefully curated in-house datasets using curriculum learnin
 
 The RLHF-style data collection module prompts users to rate the model’s responses, with ratings logged for potential use in further fine-tuning through reinforcement learning from human feedback.
 
-## Disclaimer and Purpose
+# Disclaimer and Purpose
 
 MathNet is a research-oriented project aimed at exploring the feasibility and design of highly specialised, lightweight tool-calling small language models for mathematical reasoning. While it demonstrates promising capabilities in basic algebra and arithmetic tasks within a constrained domain, it is not intended for production use or critical applications at this stage. Users should be aware that its training data is synthetic and limited in scope, and the system may not generalise well beyond its designed tasks. This work serves as a foundation for further academic inquiry and development in efficient, modular AI architectures that blend symbolic reasoning with neural computation.
 
@@ -21,7 +21,7 @@ MathNet is a research-oriented project aimed at exploring the feasibility and de
 - models can answer certain word problems (ex. if a man has 2 cats and gets 3 more how much does he have?)
 - Will build up a dataset suitable for RLHF with every rating given by the user towards MathNet.
 
-# Repository Structure
+## Repository Structure
 
 - `src/` — source code for the models, pipeline and benchmarking
 - `mathnet/` — full deployable stack (ready to run)
@@ -48,7 +48,7 @@ python run.py                #make sure you run this after activating your envir
 
 Follow the on-screen prompts to enter math questions.
 
-# Limitations
+## Limitations
 	•	Currently supports mostly grade 2-level algebra and basic arithmetic.
 	•	Limited handling of complex algebraic expressions (e.g., symbolic variable manipulations like 2a + 1a).
 	•	May misclassify or reject non-math or ambiguous queries.
@@ -118,7 +118,7 @@ This demonstrates that MathNet’s design maximises efficiency: ~39% of paramete
 
 
    
-# Recommendations (if planning to further develop)
+## Recommendations (if planning to further develop)
 	•	Use clear, math-focused input queries for best results.
 	•	Extend pretraining datasets to include more diverse algebraic problems for improved coverage.
 	•	Incorporate a fallback or “normal” language model to gracefully handle non-math inputs.
@@ -126,7 +126,7 @@ This demonstrates that MathNet’s design maximises efficiency: ~39% of paramete
 	•	Regularly update and test gating network to minimise misrouting between experts.
     •	Use the RLHF dataset made in MathNet after repeated use for fine tuning.
 
-# Recommendations (for general use)
+## Recommendations (for general use)
 	•	Since it wasn't trained on a wide dataset nor does it have a high parameter count expect it to be unusable in any area it wasn't trained in.
 	•	Give it very simple prompts and stick to the format available in the datasets(you can find them at "MathNet/src"
 	•	Stick to the max token length and try to keep the input less than 30 tokens.
@@ -134,7 +134,7 @@ This demonstrates that MathNet’s design maximises efficiency: ~39% of paramete
 	•   Give MathNet the rating when it asks for it. (will be helpful if you were to fine tune it later)
 	
  
- # Future Work
+ ## Future Work
 	•	Integrate a fallback general-purpose language model to handle non-math queries gracefully.
 	•	Expand pretraining datasets with diverse, real-world math problems to improve robustness.
 	•	Enhance gating network accuracy to reduce routing errors.
